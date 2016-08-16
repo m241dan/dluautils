@@ -1,3 +1,5 @@
+local LFS = require( "lfs" )
+
 local utils = {}
 
 function utils.requireCheck( rpath )
