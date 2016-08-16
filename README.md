@@ -8,4 +8,4 @@ This library does a few simple things:
 * __table.getKey( table, value ):__ returns the key for a given value if it is in the table
 * __table.contains( table, value ):__ returns true if the table contains the given value
 * __requireCheck( rpath ):__ returns true if a file is there and can be required(automatically adds ".lua" extension)
-* __save( data, file ):__ serializes data to given file(custom tables will need specialized serialize functions)
+* __save( data, file ):__ serializes data to given file(custom tables will need specialized :serialize() functions)
