@@ -3,6 +3,8 @@ Just a nifty little lua utils module for 5.3
 
 Written by Daniel R. Koris
 
+This library requires [lfs](https://github.com/keplerproject/luafilesystem)
+
 This library does a few simple things:
 * __table.getn( table ):__ get the real size of the table
 * __table.getKey( table, value ):__ returns the key for a given value if it is in the table
