@@ -1,4 +1,15 @@
+local LFS = require( "lfs" )
+
 local utils = {}
+
+function utils.fileExists( path )
+   local f = io.open( path, "r" )
+   if( not f ) then
+      return false
+   end
+   f:close()
+   return true
+end;
 
 function utils.requireCheck( rpath )
    if( not rpath ) then
@@ -44,6 +55,12 @@ function table.contains( table, value )
    end
    return false
 end
+
+function string.capitalize( string )
+   string = string:lower()
+   string = string:gsub( "(%l)(%w*)", function( a,b ) return a:upper() .. b; end )
+   return string
+end;
 
 local function serialize( data, indent_amount )
    if( type( data ) == "string" ) then
