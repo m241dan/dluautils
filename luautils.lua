@@ -13,6 +13,14 @@ function utils.requireCheck( rpath )
    return true
 end
 
+-- stole basic logic from: http://lua-users.org/wiki/SplitJoin
+function string.split( str, delimiter )
+   local delimiter, fields = delimiter or " ", {}
+   local pattern = string.format( "[^%s]+)", delimiter )
+   str:gsub( pattern, function( c ) fields[#fields+1] = c; end )
+   return fields
+end
+
 function table.getn( table )
    local count = 0
    for _, _ in pairs( table ) do count = count + 1; end
